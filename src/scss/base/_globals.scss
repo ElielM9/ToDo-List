@@ -1,0 +1,52 @@
+@use "config/fonts" as f;
+@use "config/colors" as c;
+@use 'mixins/breakpoints' as m;
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-size: 1.6rem;
+  background-color: c.$oscuro;
+}
+
+h1,
+h2,
+h3 {
+  margin: 1rem;
+  color: c.$azul;
+  text-align: center;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 4rem;
+  text-align: left;
+  @include m.tablet {
+    text-align: center;
+  }
+}
+
+h2 {
+  font-size: 3.6rem;
+}
+h3 {
+  font-size: 2.8rem;
+}
+p {
+  font-size: 2rem;
+}
+
+.container {
+  width: 95%;
+  max-width: 120rem;
+  margin: 0 auto;
+}

@@ -1,0 +1,75 @@
+@use "config/colors" as c;
+
+.form {
+  &__input {
+    color: c.$azul;
+    background-color: c.$oscuro;
+    width: 100%;
+    height: 4rem;
+    margin: 1rem 0;
+    border: 0;
+    outline: 5px;
+  }
+  .btn {
+    width: 100%;
+    font-size: 2rem;
+    color: c.$oscuro;
+    background-color: c.$azul;
+    border: transparent;
+    border-radius: 5px;
+    margin-bottom: 1.5rem;
+    transition: .3s ease-in-out;
+    &:hover {
+      background-color: c.$oscuro;
+      border: 2px solid c.$azul;
+      color: c.$azul;
+    }
+  }
+}
+
+.noTasks {
+  background-color: c.$oscuro;
+  margin-top: 2rem;
+  border: 3px solid c.$azul;
+  border-radius: 5px;
+}
+
+.tasks {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 0;
+  padding: 3rem;
+  width: 100%;
+  height: 4rem;
+  background-color: c.$oscuro;
+  color: c.$azul;
+  border-radius: 5px;
+  .task {
+    margin: 0;
+    font-size: 2.5rem;
+  }
+  .icons {
+    margin: 1rem;
+  }
+}
+
+.taskComplete {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 0;
+  padding: 3rem;
+  width: 100%;
+  height: 4rem;
+  color: c.$oscuro;
+  background-color: c.$azul;
+  border-radius: 5px;
+  .task {
+    margin: 0;
+    font-size: 2.5rem;
+  }
+  .icons {
+    margin: 1rem;
+  }
+}

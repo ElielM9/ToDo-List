@@ -1,4 +1,4 @@
-`use strict`;
+
 //VARIABLES
 const form = document.getElementById(`form`);
 const input = document.getElementById(`input`);
@@ -55,7 +55,7 @@ const drawTasks = () => {
 
   if (Object.values(tasks).length === 0) {
     taskLists.innerHTML = `
-    <div class="alert alert-dark text-center">No hay tareas pendientes</div>`;
+    <div class="noTasks"><h3>No hay tareas pendientes</h3></div>`;
 
     return;
   }
@@ -67,8 +67,8 @@ const drawTasks = () => {
 
     if (task.estado) {
       clone
-        .querySelector(`.alert`)
-        .classList.replace(`alert-warning`, `alert-primary`);
+        .querySelector(`.tasks`)
+        .classList.replace(`tasks`, `taskComplete`);
       clone
         .querySelectorAll(`.fas`)[0]
         .classList.replace(`fa-check`, `fa-undo-alt`);
