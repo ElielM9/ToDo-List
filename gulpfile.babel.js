@@ -48,4 +48,4 @@ function dev(done) {
 
 exports.css = css;
 exports.js = javaScript;
-exports.dev = parallel(javaScript, dev);
+exports.dev = parallel(dev);
